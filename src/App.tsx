@@ -9,6 +9,10 @@ import HomePage from "./pages/HomePage";
 import PrayerTimesPage from "./pages/PrayerTimesPage";
 import EventsPage from "./pages/EventsPage";
 import MorePage from "./pages/MorePage";
+import NotificationsPage from "./pages/NotificationsPage";
+import AskImamPage from "./pages/AskImamPage";
+import AnnouncementsPage from "./pages/AnnouncementsPage";
+import DonatePage from "./pages/DonatePage";
 import LostFoundPage from "./pages/LostFoundPage";
 import ZakatCalculatorPage from "./pages/ZakatCalculatorPage";
 import FeedbackPage from "./pages/FeedbackPage";
@@ -32,6 +36,10 @@ const App = () => (
               <Route path="prayer-times" element={<PrayerTimesPage />} />
               <Route path="events" element={<EventsPage />} />
               <Route path="more" element={<MorePage />} />
+              <Route path="notifications" element={<NotificationsPage />} />
+              <Route path="ask-imam" element={<AskImamPage />} />
+              <Route path="announcements" element={<AnnouncementsPage />} />
+              <Route path="donate" element={<DonatePage />} />
               <Route path="lost-found" element={<LostFoundPage />} />
               <Route path="zakat-calculator" element={<ZakatCalculatorPage />} />
               <Route path="feedback" element={<FeedbackPage />} />

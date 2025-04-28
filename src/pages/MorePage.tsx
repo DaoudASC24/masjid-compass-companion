@@ -1,8 +1,32 @@
-
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
+import { Bell, MessageSquare, Mail, Donate } from "lucide-react";
 
 const MORE_ITEMS = [
+  {
+    title: "Notifications",
+    description: "Customize notification preferences",
+    link: "/notifications",
+    icon: Bell,
+  },
+  {
+    title: "Ask Imam",
+    description: "Submit your questions to our Imam",
+    link: "/ask-imam",
+    icon: MessageSquare,
+  },
+  {
+    title: "Announcements",
+    description: "View latest masjid announcements",
+    link: "/announcements",
+    icon: Mail,
+  },
+  {
+    title: "Donate",
+    description: "Support our masjid",
+    link: "/donate",
+    icon: Donate,
+  },
   {
     title: "Lost & Found",
     description: "Check for items lost or found in the masjid",
@@ -38,8 +62,13 @@ const MorePage = () => {
           <Link key={item.title} to={item.link}>
             <Card className="hover:bg-accent/10 transition-colors">
               <CardContent className="p-4">
-                <h2 className="text-lg font-semibold">{item.title}</h2>
-                <p className="text-sm text-muted-foreground">{item.description}</p>
+                <div className="flex items-center gap-3">
+                  <item.icon className="h-5 w-5 text-primary" />
+                  <div>
+                    <h2 className="text-lg font-semibold">{item.title}</h2>
+                    <p className="text-sm text-muted-foreground">{item.description}</p>
+                  </div>
+                </div>
               </CardContent>
             </Card>
           </Link>
