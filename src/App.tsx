@@ -17,6 +17,7 @@ import LostFoundPage from "./pages/LostFoundPage";
 import ZakatCalculatorPage from "./pages/ZakatCalculatorPage";
 import FeedbackPage from "./pages/FeedbackPage";
 import DirectoryPage from "./pages/DirectoryPage";
+import SettingsPage from "./pages/SettingsPage";
 import NotFound from "./pages/NotFound";
 import { ThemeProvider } from "./components/ThemeProvider";
 
@@ -24,7 +25,7 @@ const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <ThemeProvider>
+    <ThemeProvider defaultTheme="light">
       <TooltipProvider>
         <Toaster />
         <Sonner />
@@ -44,6 +45,7 @@ const App = () => (
               <Route path="zakat-calculator" element={<ZakatCalculatorPage />} />
               <Route path="feedback" element={<FeedbackPage />} />
               <Route path="directory" element={<DirectoryPage />} />
+              <Route path="settings" element={<SettingsPage />} />
             </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>

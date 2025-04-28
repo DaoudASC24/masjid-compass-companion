@@ -1,7 +1,6 @@
-
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
-import { Bell, MessageSquare, Mail, PiggyBank, Search, Calculator, MessageCircle, Building } from "lucide-react";
+import { Bell, MessageSquare, Mail, PiggyBank, Search, Calculator, MessageCircle, Building, Settings } from "lucide-react";
 
 const MORE_ITEMS = [
   {
@@ -51,6 +50,12 @@ const MORE_ITEMS = [
     description: "Find Muslim businesses and services in the community",
     link: "/directory",
     icon: Building,
+  },
+  {
+    title: "Settings",
+    description: "Customize your app preferences",
+    link: "/settings",
+    icon: Settings,
   },
 ];
 
