@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -14,18 +15,18 @@
     --popover-foreground: 220 10% 20%;
 
     /* Light teal as primary */
-    --primary: 180 60% 45%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 180 3% 85%; /* Platinum */
+    --primary-foreground: 220 10% 20%;
 
     /* Platinum as secondary */
-    --secondary: 220 10% 95%;
+    --secondary: 220 10% 95%; /* Light platinum */
     --secondary-foreground: 220 10% 20%;
 
     --muted: 220 10% 96%;
     --muted-foreground: 220 10% 45%;
 
     /* Very light teal for accent */
-    --accent: 180 60% 97%;
+    --accent: 180 10% 92%; /* Very light platinum */
     --accent-foreground: 220 10% 20%;
 
     /* System colors */
@@ -35,7 +36,7 @@
     /* Platinum for borders */
     --border: 220 10% 92%;
     --input: 220 10% 92%;
-    --ring: 180 60% 45%;
+    --ring: 220 10% 85%;
 
     --radius: 0.5rem;
   }

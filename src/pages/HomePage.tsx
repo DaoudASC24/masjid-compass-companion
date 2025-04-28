@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { formatDistanceToNow } from "date-fns";
 import { useToast } from "@/components/ui/use-toast";
+import PrayerBanner from "@/components/PrayerBanner";
 
 const HomePage = () => {
   const [nextPrayer, setNextPrayer] = useState(getNextPrayer());
@@ -74,7 +75,25 @@ const HomePage = () => {
         <p className="text-muted-foreground">Welcome to Smart Masjid</p>
       </section>
       
+      {/* Prayer Times Banner */}
+      <section className="mb-4">
+        <h2 className="text-xl font-semibold mb-2">Prayer Times</h2>
+        <PrayerBanner />
+      </section>
+      
       <section className="space-y-4">
+        {/* Featured Image */}
+        <div className="rounded-lg overflow-hidden h-48 relative">
+          <img 
+            src="https://images.unsplash.com/photo-1466442929976-97f336a657be?auto=format&fit=crop&w=800" 
+            alt="Masjid" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4">
+            <h3 className="text-white text-xl font-bold">Our Beautiful Masjid</h3>
+          </div>
+        </div>
+        
         {/* Capacity Widget */}
         <Card>
           <CardContent className="p-4">
