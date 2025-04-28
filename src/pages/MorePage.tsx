@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
-import { Bell, MessageSquare, Mail, Donate } from "lucide-react";
+import { Bell, MessageSquare, Mail, PiggyBank } from "lucide-react";
 
 const MORE_ITEMS = [
   {
@@ -25,7 +25,7 @@ const MORE_ITEMS = [
     title: "Donate",
     description: "Support our masjid",
     link: "/donate",
-    icon: Donate,
+    icon: PiggyBank,
   },
   {
     title: "Lost & Found",
