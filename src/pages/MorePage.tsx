@@ -1,6 +1,7 @@
+
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
-import { Bell, MessageSquare, Mail, PiggyBank } from "lucide-react";
+import { Bell, MessageSquare, Mail, PiggyBank, Search, Calculator, MessageCircle, Building } from "lucide-react";
 
 const MORE_ITEMS = [
   {
@@ -31,21 +32,25 @@ const MORE_ITEMS = [
     title: "Lost & Found",
     description: "Check for items lost or found in the masjid",
     link: "/lost-found",
+    icon: Search,
   },
   {
     title: "Zakat Calculator",
     description: "Calculate your Zakat obligation",
     link: "/zakat-calculator",
+    icon: Calculator,
   },
   {
     title: "Feedback Form",
     description: "Share your suggestions with the masjid administration",
     link: "/feedback",
+    icon: MessageCircle,
   },
   {
     title: "Masjid Directory",
     description: "Find Muslim businesses and services in the community",
     link: "/directory",
+    icon: Building,
   },
 ];
 
