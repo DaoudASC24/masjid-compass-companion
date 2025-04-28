@@ -2,9 +2,11 @@
 import { Outlet, NavLink, useLocation } from "react-router-dom";
 import { Calendar, Home, Clock, Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
 
 const Layout = () => {
   const location = useLocation();
+  const { t } = useTranslation();
   
   return (
     <div className="flex flex-col min-h-screen bg-background">
@@ -16,25 +18,25 @@ const Layout = () => {
         <NavTab 
           to="/home" 
           icon={<Home className="h-6 w-6" />} 
-          label="Home" 
+          label={t('nav.home')} 
           isActive={location.pathname === "/home"} 
         />
         <NavTab 
           to="/prayer-times" 
           icon={<Clock className="h-6 w-6" />} 
-          label="Prayer Times" 
+          label={t('nav.prayerTimes')} 
           isActive={location.pathname === "/prayer-times"} 
         />
         <NavTab 
           to="/events" 
           icon={<Calendar className="h-6 w-6" />} 
-          label="Events" 
+          label={t('nav.events')} 
           isActive={location.pathname === "/events"} 
         />
         <NavTab 
           to="/more" 
           icon={<Menu className="h-6 w-6" />} 
-          label="More" 
+          label={t('nav.more')} 
           isActive={location.pathname === "/more"} 
         />
       </nav>
