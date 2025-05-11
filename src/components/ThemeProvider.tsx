@@ -23,7 +23,7 @@ const ThemeProviderContext = createContext<ThemeProviderState>(initialState);
 
 export function ThemeProvider({
   children,
-  defaultTheme = "system",
+  defaultTheme = "light", // Changed to light as default
   storageKey = "masjid-ui-theme",
   ...props
 }: ThemeProviderProps) {
@@ -50,31 +50,6 @@ export function ThemeProvider({
     root.classList.add(theme);
     root.style.colorScheme = theme;
   }, [theme]);
-
-  useEffect(() => {
-    // Auto-switch to dark mode after Maghrib
-    const getPrayerTimes = () => {
-      // For MVP, we'll use a simple check to see if it's after sunset
-      // In a real app, we'd use actual Maghrib time calculation
-      const now = new Date();
-      const hour = now.getHours();
-      
-      // Simple assumption: Maghrib is after 5pm and before sunrise (6am)
-      if (hour >= 17 || hour < 6) {
-        setTheme("dark");
-      } else {
-        setTheme("light");
-      }
-    };
-    
-    // Check once on initial load
-    getPrayerTimes();
-    
-    // Then check every hour
-    const interval = setInterval(getPrayerTimes, 60 * 60 * 1000);
-    
-    return () => clearInterval(interval);
-  }, []);
 
   const value = {
     theme,
